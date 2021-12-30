@@ -1,0 +1,19 @@
+{
+  "name": "mcnc-plugin-qrcodescanner",
+  "version": "1.0.0",
+  "description": "",
+  "cordova": {
+    "id": "mcnc-plugin-qrcodescanner",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "MCNC",
+  "license": "ISC"
+}

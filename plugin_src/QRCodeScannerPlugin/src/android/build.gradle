@@ -1,0 +1,8 @@
+dependencies {
+    //QRCodeScanner
+    // implementation 'com.budiyev.android:code-scanner:2.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation 'com.google.zxing:core:3.3.2'
+    implementation files('libs/code-scanner-2.1.0.aar')
+    implementation files('libs/qr_code_scanner-release.1.0.7.aar')
+}

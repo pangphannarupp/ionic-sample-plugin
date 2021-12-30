@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { QrcodeScanner } from 'interface_src/qrcode-scanner/ngx';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,22 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  // win: any = window;
+
+  constructor(private qrcodeScanner: QrcodeScanner) {}
+
+  scanQRCode() {
+    // this.win.QRCodeScannerPlugin.scan('test', (result) => {
+    //   console.log(result);
+    // }, (error) => {
+    //   console.log(error);
+    // });
+
+    this.qrcodeScanner.scan('Test').then(result => {
+      console.log(result);
+    }).catch(error => {
+      console.log(error);
+    });
+  }
 
 }

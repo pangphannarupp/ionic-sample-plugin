@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="mcnc-plugin-qrcodescanner" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>QRCodeScannerPlugin</name>
+    <js-module name="QRCodeScannerPlugin" src="www/QRCodeScannerPlugin.js">
+        <clobbers target="QRCodeScannerPlugin" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="QRCodeScannerPlugin">
+                <param name="android-package" value="mcnc.plugin.qrcodescanner.QRCodeScannerPlugin" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml" />
+        <source-file src="src/android/QRCodeScannerPlugin.java" target-dir="src/mcnc/plugin/qrcodescanner/QRCodeScannerPlugin" />
+        <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
+        <lib-file src="src/android/code-scanner-2.1.0.aar" />
+        <lib-file src="src/android/qr_code_scanner-release.1.0.7.aar" />
+    </platform>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="QRCodeScannerPlugin">
+                <param name="ios-package" value="QRCodeScannerPlugin" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/QRCodeScannerPlugin.m" />
+    </platform>
+</plugin>
